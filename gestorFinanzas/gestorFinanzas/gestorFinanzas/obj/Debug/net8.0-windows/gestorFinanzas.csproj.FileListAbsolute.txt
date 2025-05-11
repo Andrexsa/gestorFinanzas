@@ -1,0 +1,4 @@
+C:\Users\santy\Desktop\gestorFinanzas\gestorFinanzas\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\santy\Desktop\gestorFinanzas\gestorFinanzas\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\santy\Desktop\gestorFinanzas\gestorFinanzas\obj\Debug\net8.0-windows\gestorFinanzas_MarkupCompile.cache
+C:\Users\santy\Desktop\gestorFinanzas\gestorFinanzas\obj\Debug\net8.0-windows\gestorFinanzas_MarkupCompile.lref
