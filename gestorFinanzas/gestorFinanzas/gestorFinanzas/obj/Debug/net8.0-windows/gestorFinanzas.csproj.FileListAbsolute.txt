@@ -25,3 +25,7 @@ C:\Users\Personal\Source\Repos\gestorFinanzas\gestorFinanzas\gestorFinanzas\gest
 C:\Users\Personal\Source\Repos\gestorFinanzas\gestorFinanzas\gestorFinanzas\gestorFinanzas\obj\Debug\net8.0-windows\gestorFinanzas.pdb
 C:\Users\Personal\Source\Repos\gestorFinanzas\gestorFinanzas\gestorFinanzas\gestorFinanzas\obj\Debug\net8.0-windows\gestorFinanzas.genruntimeconfig.cache
 C:\Users\Personal\Source\Repos\gestorFinanzas\gestorFinanzas\gestorFinanzas\gestorFinanzas\obj\Debug\net8.0-windows\ref\gestorFinanzas.dll
+C:\Users\Personal\Source\Repos\gestorFinanzas\gestorFinanzas\gestorFinanzas\gestorFinanzas\bin\Debug\net8.0-windows\LiveCharts.dll
+C:\Users\Personal\Source\Repos\gestorFinanzas\gestorFinanzas\gestorFinanzas\gestorFinanzas\bin\Debug\net8.0-windows\LiveCharts.Wpf.dll
+C:\Users\Personal\Source\Repos\gestorFinanzas\gestorFinanzas\gestorFinanzas\gestorFinanzas\obj\Debug\net8.0-windows\gestorFinanzas.csproj.AssemblyReference.cache
+C:\Users\Personal\Source\Repos\gestorFinanzas\gestorFinanzas\gestorFinanzas\gestorFinanzas\obj\Debug\net8.0-windows\gestorFi.A849453E.Up2Date

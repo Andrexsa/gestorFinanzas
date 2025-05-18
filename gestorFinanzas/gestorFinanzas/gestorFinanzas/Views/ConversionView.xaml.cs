@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using gestorFinanzas.controllers;
 using gestorFinanzas.models;
+using LiveCharts;
+using LiveCharts.Wpf;
 
 namespace gestorFinanzas.Views
 {
@@ -29,7 +31,29 @@ namespace gestorFinanzas.Views
             controladorConversor = new ConversorController();
             divisaControlador = new DivisaController();
             CargarListas();
+            SeriesCollection = new SeriesCollection
+            {
+                new RowSeries
+                {
+                    Title = "Ventas 2015",
+                    Values = new ChartValues<double>{10, 50, 39, 58, 45, 25}
+                }
+            };
+
+            SeriesCollection.Add(new RowSeries
+            {
+                Title = "Ventas 2016",
+                Values = new ChartValues<double> { 11, 56, 46, 48, 23, 35}
+            });
+
+            Labels = GenerarFechas();
+            Formatter = value => value.ToString();
+            DataContext = this;
         }
+
+        public SeriesCollection SeriesCollection { get; set; }
+        public string[] Labels { get; set; }
+        public Func<double,string> Formatter { get; set; }
 
         public void CargarListas()
         {
@@ -46,5 +70,18 @@ namespace gestorFinanzas.Views
             Conversor? conversion = controladorConversor.obtenerConversion(divisaOriginal, divisaObjetivo, cantidad);
             montoConvertido.Text = conversion?.conversion_result.ToString();
         }
+
+        public string[] GenerarFechas()
+        {
+            string[] fechas = new string[6];
+            int numerador = 1;
+            DateTime Hoy = DateTime.Now;
+            for (int i = 0; i < 6; i++)
+            {
+                DateTime FechaRestada = Hoy.AddDays(-numerador - i);
+                fechas[i] = FechaRestada.ToString("dd/MM/yyyy");
+            }
+            return fechas;
+        } 
     }
 }
