@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\1\\OneDrive\\Documents\\Visual Studio 2022\\AppFinanciera\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BB8F89CD-6C18-430E-9206-87328ACDB3F5}|AppFinanciera\\AppFinanciera.csproj|c:\\users\\1\\onedrive\\documents\\visual studio 2022\\appfinanciera\\appfinanciera\\views\\viewinversion.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BB8F89CD-6C18-430E-9206-87328ACDB3F5}|AppFinanciera\\AppFinanciera.csproj|solutionrelative:appfinanciera\\views\\viewinversion.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 191,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ViewInversion.xaml",
+              "DocumentMoniker": "C:\\Users\\1\\OneDrive\\Documents\\Visual Studio 2022\\AppFinanciera\\AppFinanciera\\Views\\ViewInversion.xaml",
+              "RelativeDocumentMoniker": "AppFinanciera\\Views\\ViewInversion.xaml",
+              "ToolTip": "C:\\Users\\1\\OneDrive\\Documents\\Visual Studio 2022\\AppFinanciera\\AppFinanciera\\Views\\ViewInversion.xaml",
+              "RelativeToolTip": "AppFinanciera\\Views\\ViewInversion.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-18T23:17:34.237Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
