@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("gestorFinanzas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+06f7e95ea8f1f2ddb1509080360cc3a4542ac4b5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ea335ba1ee11c5e30e6a18b5d883762d78ddb72")]
 [assembly: System.Reflection.AssemblyProductAttribute("gestorFinanzas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("gestorFinanzas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
