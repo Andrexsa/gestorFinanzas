@@ -1,0 +1,24 @@
+﻿<Window x:Class="gestorFinanzas.Views.ConversionView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:gestorFinanzas.Views"
+        mc:Ignorable="d"
+        Title="ConversionView" Height="700" Width="1200">
+    <Grid>
+        <StackPanel Grid.Column="0" Width="600" HorizontalAlignment="Left">
+            <TextBlock Text="Elemento 1"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Width="600" HorizontalAlignment="Right">
+            <Label Name="labelDivisaOrigenSeleccion" Width="200" Target="{Binding ElementName=monto}">De:</Label>
+            <TextBox Name="monto" Width="200" Height="30" Margin="-100,0,0,0"/>
+            <ComboBox Name="divisaOrigenSeleccion" Width="100" Height="30" Margin="10,-30,-190,0"></ComboBox>
+            <Label Name="labelDivisaDestinoSeleccion" Width="200" Target="{Binding ElementName=divisaDestino}">A:</Label>
+            <TextBox Name="montoConvertido" Width="200" Height="30" Margin="-100,0,0,0"></TextBox>
+            <ComboBox Name="divisaDestinoSeleccion" Width="100" Height="30" Margin="200,-30,0,0" Text="Seleccione la divisa"></ComboBox>
+            <Button Content="Convertir" Name="botonConvertir" Width="100" Height="40" Margin="0,50,0,0" Click="botonConvertir_Click"></Button>
+            <Label Name="labelmontoConvertido" Content="" Width="200"></Label>
+        </StackPanel>
+    </Grid>
+</Window>
