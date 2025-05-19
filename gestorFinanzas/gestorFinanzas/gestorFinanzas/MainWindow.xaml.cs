@@ -20,8 +20,8 @@ namespace gestorFinanzas
         public MainWindow()
         {
             InitializeComponent();
-            ConversionView vistaConversion = new ConversionView();
-            vistaConversion.Visibility = Visibility.Visible;
+            //ConversionView vistaConversion = new ConversionView();
+            //vistaConversion.Visibility = Visibility.Visible;
         }
     }
 }
