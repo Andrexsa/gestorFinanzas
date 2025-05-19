@@ -13,21 +13,20 @@ namespace gestorFinanzas.controllers
             _servicio = new AhorroService();
         }
 
-        public void CrearAhorro(string tipo, decimal total, string fechaInicio, string fechaFin, string frecuencia)
+        public void CrearAhorro(int id, string nombreAhorro, string tipoAhorro, decimal totalAhorro, DateTime fechaInicio, DateTime fechaFinAhorro, string frecuencia, DateTime ultimaFechaIngreso)
         {
-            var nuevoAhorro = new Ahorro(GenerarId(), tipo, total, fechaInicio, fechaFin, frecuencia);
+            var nuevoAhorro = new Ahorro(GenerarId(), nombreAhorro, tipoAhorro, totalAhorro, fechaInicio, fechaFinAhorro, frecuencia, ultimaFechaIngreso);
             _servicio.AgregarAhorro(nuevoAhorro);
         }
 
-        public void IngresarDinero(int id, decimal monto)
+        public models.Ahorro IngresarDinero(string nombreAhorro, decimal monto)
         {
-            _servicio.IngresarMonto(id, monto);
-        }
+            _servicio.IngresarMonto(nombreAhorro, monto);
 
-        public void MostrarAlerta(int id)
-        {
-            string mensaje = _servicio.VerificarRetraso(id);
-            MessageBox.Show(mensaje, "Alerta de Ahorro");
+            // Buscar el ahorro actualizado y devolverlo
+            var ahorro = BuscarPorNombre(nombreAhorro);
+
+            return ahorro;
         }
 
         public List<Ahorro> ObtenerTodos()
@@ -38,6 +37,12 @@ namespace gestorFinanzas.controllers
         private int GenerarId()
         {
             return new Random().Next(1000, 9999);
+        }
+
+        public Ahorro BuscarPorNombre(string nombreAhorro)
+        {
+            // Implementa la lógica para buscar en la base de datos por nombre
+            return _servicio.BuscarPorNombre(nombreAhorro);
         }
     }
 }
