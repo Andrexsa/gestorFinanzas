@@ -58,5 +58,17 @@ namespace gestorFinanzas.views
             conversionView.Show();
             this.Close();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            
+            ViewInversion viewinversion = new ViewInversion();
+            viewinversion.Show();
+            viewinversion.Show();
+            this.Close();
+
+
+
+        }
     }
 }

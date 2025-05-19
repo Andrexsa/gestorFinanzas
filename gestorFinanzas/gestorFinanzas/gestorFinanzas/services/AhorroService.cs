@@ -10,7 +10,7 @@
     public class AhorroService
     {
 
-        private static string _connectionString = "server=localhost;user=root; database=gestor_finanzas;password=;port=3306;";
+        private static string _connectionString = "server=localhost;user=root; database=gestorfinanzas;password=;port=3306;";
         public void AgregarAhorro(Ahorro ahorro)
         {
             using (MySqlConnection connection = new MySqlConnection(_connectionString))

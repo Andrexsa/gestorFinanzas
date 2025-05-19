@@ -1,24 +1,49 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel;
 
 namespace gestorFinanzas.models
 {
-    public class Inversion
+    public class Inversion : INotifyPropertyChanged
     {
-        public string FechaInvertir { get; set; }
-        public decimal Monto { get; set; }
-        public string AreaInversion { get; set; }
-        public string Moneda { get; set; }
+        private decimal _precioActual;
+        private Activo _activo;
 
-        public Inversion(string fechaInvertir, decimal monto, string areaInversion, string moneda)
+        public int IdInversion { get; set; }
+        public decimal Cantidad { get; set; }
+        public decimal Precio { get; set; }
+        public DateTime Tiempo { get; set; }
+        public int IdActivo { get; set; }
+
+        public Activo Activo
         {
-            FechaInvertir = fechaInvertir;
-            Monto = monto;
-            AreaInversion = areaInversion;
-            Moneda = moneda;
+            get => _activo;
+            set
+            {
+                _activo = value;
+                OnPropertyChanged(nameof(Activo));
+            }
+        }
+
+        public decimal PrecioActual
+        {
+            get => _precioActual;
+            set
+            {
+                _precioActual = value;
+                OnPropertyChanged(nameof(PrecioActual));
+                OnPropertyChanged(nameof(ValorActual));
+                OnPropertyChanged(nameof(Ganancia));
+            }
+        }
+
+        public decimal ValorActual => Cantidad * PrecioActual;
+        public decimal Ganancia => ValorActual - (Cantidad * Precio);
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
