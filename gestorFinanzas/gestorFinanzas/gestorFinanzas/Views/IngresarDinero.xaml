@@ -1,0 +1,45 @@
+﻿<Window x:Class="gestorFinanzas.views.IngresarDinero"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:gestorFinanzas.views"
+        mc:Ignorable="d"
+        Title="IngresarDinero" Height="450" Width="800">
+    <Grid>
+
+        <TextBlock Text="Ingresar Dinero"
+               FontFamily="Segoe UI Black"
+               FontSize="30"
+               FontWeight="Bold"
+               Foreground="#1E8C00"
+               HorizontalAlignment="Center"
+               Margin="0,10,0,0"/>
+
+        <TextBlock Text="Cantidad a ingresar:"
+               FontSize="16"
+               FontWeight="Bold"
+               Margin="20,100,0,0"
+               VerticalAlignment="Top"/>
+
+        <TextBox x:Name="txtCantidad"
+             Width="200"
+             Height="30"
+             Margin="220,100,0,0"
+             VerticalAlignment="Top"
+             HorizontalAlignment="Left"
+             PreviewTextInput="txtCantidad_PreviewTextInput"/>
+
+        <Button Content="Guardar"
+            Width="100"
+            Height="30"
+            Margin="320,160,0,0"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Background="#4CAF50"
+            Foreground="White"
+            FontWeight="Bold"
+            Click="Guardar_Click"/>
+    </Grid>
+
+</Window>

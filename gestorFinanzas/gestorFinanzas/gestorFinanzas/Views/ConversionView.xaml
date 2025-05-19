@@ -9,31 +9,31 @@
         Title="ConversionView" Height="700" Width="1000">
     <Border Background="#eaf8c9">
         <Grid>
-            <StackPanel Grid.Column="0" Width="600" HorizontalAlignment="Left">
-                <TextBlock Text="EQUIVALENCIA DURANTE LA SEMANA" FontWeight="Bold" FontFamily="Franklin Gothic Heavy" FontSize="16" HorizontalAlignment="Center"></TextBlock>
-                <lvc:CartesianChart Height="600" Margin="0,50,0,0" Series="{Binding SeriesCollection}" LegendLocation="Bottom">
+            <StackPanel Grid.Column="0" Width="600" HorizontalAlignment="Left" Background="White">
+                <TextBlock Text="EQUIVALENCIA DURANTE LA SEMANA" FontWeight="Bold" FontFamily="Segoe UI Black" FontSize="20" Margin="90,30,0,0"/>
+                <lvc:CartesianChart Height="547" Margin="0,50,0,0" Series="{Binding SeriesCollection}" LegendLocation="Bottom" Width="529">
                     <lvc:CartesianChart.AxisX>
-                        <lvc:Axis Title="Valores" LabelFormatter="{Binding Formatter}">
-                        </lvc:Axis>
+                        <lvc:Axis Title="Valores" LabelFormatter="{Binding Formatter}"/>
                     </lvc:CartesianChart.AxisX>
                     <lvc:CartesianChart.AxisY>
-                        <lvc:Axis Title="Fechas" Labels="{Binding Labels}"></lvc:Axis>
+                        <lvc:Axis Title="Fechas" Labels="{Binding Labels}"/>
                     </lvc:CartesianChart.AxisY>
                     <lvc:CartesianChart.DataTooltip>
-                        <lvc:DefaultTooltip SelectionMode="SharedYValues"></lvc:DefaultTooltip>
+                        <lvc:DefaultTooltip SelectionMode="SharedYValues"/>
                     </lvc:CartesianChart.DataTooltip>
                 </lvc:CartesianChart>
             </StackPanel>
-            <StackPanel Grid.Column="1" Width="400" HorizontalAlignment="Right">
-                <Label Name="labelDivisaOrigenSeleccion" Width="200" Target="{Binding ElementName=monto}" FontSize="24" FontFamily="Roboto">De:</Label>
-                <TextBox Name="monto" Width="200" Height="30" Margin="-150,40,0,0" FontFamily="Roboto"/>
-                <ComboBox Name="divisaOrigenSeleccion" Width="100" Height="30" Margin="-40,-30,-190,0"></ComboBox>
-                <Label Name="labelDivisaDestinoSeleccion" Width="200" Target="{Binding ElementName=divisaDestinoSeleccion}" FontFamily="Roboto" FontSize="24" RenderTransformOrigin="0.48,0.578">A:</Label>
-                <TextBox Name="montoConvertido" Width="200" Height="30" Margin="-150,50,0,0" IsReadOnly="True" FontFamily="Roboto"></TextBox>
-                <ComboBox Name="divisaDestinoSeleccion" Width="100" Height="30" Margin="150,-30,0,0" Text="Seleccione la divisa"></ComboBox>
-                <Button Content="Convertir" Name="botonConvertir" Width="100" Height="40" Margin="-50,100,0,0" Click="botonConvertir_Click" Foreground="Black" Background="#FF33FF22" BorderBrush="#FF011000" FontFamily="Bahnschrift SemiBold"/>
-                <Label Name="labelmontoConvertido" Content="" Width="200"></Label>
+            <StackPanel Grid.Column="1" Width="400" HorizontalAlignment="Right" Background="White">
+                <Label x:Name="labelDivisaOrigenSeleccion" Width="200" Target="{Binding ElementName=monto}" FontSize="24" FontFamily="Segoe UI Black" Content="De:" Margin="2,30,0,0"/>
+                <TextBox x:Name="monto" Width="200" Height="30" Margin="-150,40,0,0" FontFamily="Roboto"/>
+                <ComboBox x:Name="divisaOrigenSeleccion" Width="100" Height="30" Margin="-40,-30,-190,0"/>
+                <Label x:Name="labelDivisaDestinoSeleccion" Width="200" Target="{Binding ElementName=divisaDestinoSeleccion}" FontFamily="Segoe UI Black" FontSize="24" RenderTransformOrigin="0.48,0.578" Content="A:" Margin="2,30,0,0"/>
+                <TextBox x:Name="montoConvertido" Width="200" Height="30" Margin="-150,50,0,0" IsReadOnly="True" FontFamily="Roboto"/>
+                <ComboBox x:Name="divisaDestinoSeleccion" Width="100" Height="30" Margin="150,-30,0,0" Text="Seleccione la divisa"/>
+                <Button Content="Convertir" x:Name="botonConvertir" Width="100" Height="40" Margin="-50,100,0,0" Click="botonConvertir_Click" Foreground="White" Background="#FF4CAF50" BorderBrush="White" FontFamily="Segoe UI Black"/>
+                <Label x:Name="labelmontoConvertido" Content="" Width="200"/>
                 <TextBlock x:Name="detalle" TextWrapping="Wrap" Text="" FontFamily="Arial Rounded MT Bold" FontSize="20"/>
+                <Button Content="Volver" x:Name="btnVolver" Width="100" Height="40" Margin="-50,10,0,0" Click="btnVolver_Click" Foreground="White" Background="#FFF81010" BorderBrush="White" FontFamily="Segoe UI Black"/>
             </StackPanel>
         </Grid>
     </Border>

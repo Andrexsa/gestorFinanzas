@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using gestorFinanzas.controllers;
 using gestorFinanzas.models;
+using gestorFinanzas.views;
 using LiveCharts;
 using LiveCharts.Wpf;
 
@@ -68,6 +69,7 @@ namespace gestorFinanzas.Views
             CargarGrafico(divisaOriginal, divisaObjetivo);
         }
 
+
         public string[] GenerarFechas()
         {
             string[] fechas = new string[6];
@@ -119,6 +121,14 @@ namespace gestorFinanzas.Views
             Formatter = value => value.ToString();
             DataContext = null;
             DataContext = this;
+        }
+
+        private void btnVolver_Click(object sender, RoutedEventArgs e)
+        {
+            Principal principal = new Principal();
+            principal.Show();
+            principal.Show();
+            this.Close();
         }
     }
 }
