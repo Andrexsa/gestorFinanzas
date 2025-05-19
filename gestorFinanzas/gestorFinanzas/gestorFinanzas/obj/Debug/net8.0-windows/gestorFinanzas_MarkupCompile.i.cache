@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\santy\Source\Repos\gestorFinanzas\gestorFinanzas\gestorFinanzas\gestorFinanzas\obj\Debug\net8.0-windows\
+C:\Users\1\Source\Repos\gestorFinanzas\gestorFinanzas\gestorFinanzas\gestorFinanzas\obj\Debug\net8.0-windows\
 gestorFinanzas
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-C:\Users\santy\Source\Repos\gestorFinanzas\gestorFinanzas\gestorFinanzas\gestorFinanzas\App.xaml
-61792173333
+C:\Users\1\Source\Repos\gestorFinanzas\gestorFinanzas\gestorFinanzas\gestorFinanzas\App.xaml
+72065222817
 
-32-1754908732
-2081929199429
-MainWindow.xaml;Views\AgregarAhorro.xaml;Views\ConversionView.xaml;Views\IngresarDinero.xaml;Views\Principal.xaml;Views\VistaAhorro.xaml;
+36-418522160
+222-323471807
+MainWindow.xaml;Views\AgregarAhorro.xaml;Views\ConversionView.xaml;Views\IngresarDinero.xaml;Views\Principal.xaml;Views\ViewInversion.xaml;Views\VistaAhorro.xaml;
 
-True
+False
 
