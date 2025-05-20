@@ -184,6 +184,10 @@
                     <Button Content="COMPRAR" Click="BtnComprar_Click" 
                             Background="#4CAF50" Foreground="White" 
                             FontWeight="Bold" Padding="10,5"/>
+
+                    <Button Content="VOLVER" Click="BtnVolver_Click"
+                            Background="#FFE01111" Foreground="White"
+                            FontWeight="Bold" Padding="10,5" Margin="0,10,0,0"/>
                 </StackPanel>
             </Border>
         </Grid>

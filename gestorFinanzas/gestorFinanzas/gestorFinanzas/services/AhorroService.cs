@@ -26,7 +26,8 @@
                     tipo_ahorro,
                     fecha_inicio,
                     frecuencia,
-                    nombre_ahorro
+                    nombre_ahorro,
+                    monto_objetivo
                 ) VALUES (
                     @Id,
                     @TotalAhorro,
@@ -35,8 +36,10 @@
                     @TipoAhorro,
                     @FechaInicio,
                     @Frecuencia,
-                    @NombreAhorro
+                    @NombreAhorro,
+                    @MontoObjetivo
                 );";
+
 
 
 
@@ -50,6 +53,7 @@
                     cmd.Parameters.AddWithValue("@FechaInicio", ahorro.FechaInicio);
                     cmd.Parameters.AddWithValue("@Frecuencia", ahorro.Frecuencia);
                     cmd.Parameters.AddWithValue("@NombreAhorro", ahorro.NombreAhorro);
+                    cmd.Parameters.AddWithValue("@MontoObjetivo", ahorro.MontoObjetivo);
 
 
                     cmd.ExecuteNonQuery();
@@ -74,15 +78,17 @@
                         while (reader.Read())
                         {
                             var ahorro = new Ahorro(
-                                reader.GetInt32(0), // Id
-                                reader.GetString(1), //Nombre
-                                reader.GetString(2), // Tipo
-                                reader.GetDecimal(3), // TotalAhorro
-                                reader.GetDateTime(4), // FechaInicio
-                                reader.GetDateTime(5), // FechaFin
-                                reader.GetString(6), // Frecuencia
-                                reader.GetDateTime(7) // UltimaFechaIngreso
+                                reader.GetInt32("id_ahorro"),
+                                reader.GetString("nombre_ahorro"),
+                                reader.GetString("tipo_ahorro"),
+                                reader.GetDecimal("total_ahorrado"),
+                                reader.GetDecimal("monto_objetivo"), 
+                                reader.GetDateTime("fecha_inicio"),
+                                reader.GetDateTime("fecha_final_ahorrado"),
+                                reader.GetString("frecuencia"),
+                                reader.GetDateTime("fecha_ahorrado")
                             );
+
 
                             ahorros.Add(ahorro);
                         }
@@ -130,15 +136,18 @@
                         if (reader.Read())
                         {
                             return new Ahorro(
-                                reader.GetInt32("id_ahorro"),
-                                reader.GetString("nombre_ahorro"),
-                                reader.GetString("tipo_ahorro"),
-                                reader.GetDecimal("total_ahorrado"),
-                                reader.GetDateTime("fecha_inicio"),
-                                reader.GetDateTime("fecha_final_ahorrado"),
-                                reader.GetString("frecuencia"),
-                                reader.GetDateTime("fecha_ahorrado")
-                            );
+                            reader.GetInt32("id_ahorro"),
+                            reader.GetString("nombre_ahorro"),
+                            reader.GetString("tipo_ahorro"),
+                            reader.GetDecimal("total_ahorrado"),
+                            reader.GetDecimal("monto_objetivo"), 
+                            reader.GetDateTime("fecha_inicio"),
+                            reader.GetDateTime("fecha_final_ahorrado"),
+                            reader.GetString("frecuencia"),
+                            reader.GetDateTime("fecha_ahorrado")
+                        );
+
+
                         }
                     }
                 }

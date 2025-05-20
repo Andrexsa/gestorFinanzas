@@ -41,7 +41,7 @@ namespace gestorFinanzas.views
 
             IngresarDinero ingresarDinero = new IngresarDinero(this, nombre);
             ingresarDinero.Show();
-            this.IsEnabled = false;
+            this.IsEnabled = true;
 
         }
 
@@ -104,22 +104,26 @@ namespace gestorFinanzas.views
             }
         }
 
-
-
-
         public void ActualizarInterfazConAhorro(models.Ahorro ahorro, decimal montoIngresado = 0)
         {
-            lblTotalAhorro.Text = $"${ahorro.TotalAhorro}";
+            if (montoIngresado > 0)
+            {
+                ahorro.TotalAhorro += montoIngresado;
+            }
 
-            decimal meta = 5000;
+            lblTotalAhorro.Text = $"${ahorro.TotalAhorro:N2}";
+
+            decimal meta = ahorro.MontoObjetivo;   
 
             decimal restante = meta - ahorro.TotalAhorro;
-            lblRestante.Text = $"Dinero restante: ${restante:N2}";
+            if (restante < 0) restante = 0; 
 
+            lblRestante.Text = $"Dinero restante: ${restante:N2}";
 
             int diasParaIngresar = CalcularDiasRestantes(ahorro);
             lblDiasRestantes.Text = $"Faltan {diasParaIngresar} días para volver a ingresar dinero al ahorro";
         }
+
 
 
 
@@ -131,7 +135,7 @@ namespace gestorFinanzas.views
                 "Semanalmente" => 7,
                 "Quincenalmente" => 15,
                 "Mensualmente" => 30,
-                _ => 7 // Valor por defecto
+                _ => 7 
             };
 
             DateTime proximaFecha = ahorro.UltimaFechaIngreso.AddDays(diasFrecuencia);
