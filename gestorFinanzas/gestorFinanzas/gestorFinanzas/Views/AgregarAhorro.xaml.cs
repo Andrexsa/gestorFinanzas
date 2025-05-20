@@ -31,12 +31,12 @@ namespace gestorFinanzas.views
         private void Button_Click_Cancelar(object sender, RoutedEventArgs e)
         {
             Principal principal = new Principal();
-            principal.Show(); // Usa ShowDialog() si quieres que sea modal
+            principal.Show(); 
 
             principal.Show();
             this.Close();
         }
-        //Boton agregar ahorro
+       
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
 
@@ -64,7 +64,6 @@ namespace gestorFinanzas.views
             DateTime fechaInicio = DateTime.Now;
             DateTime fechaFinAhorro;
 
-            // Interpretar duración
             switch (duracion)
             {
                 case "1 Semana":
@@ -86,29 +85,29 @@ namespace gestorFinanzas.views
                     fechaFinAhorro = fechaInicio.AddYears(2);
                     break;
                 default:
-                    fechaFinAhorro = fechaInicio; // fallback
+                    fechaFinAhorro = fechaInicio;
                     break;
             }
 
             try
             {
-                // Crear el ahorro con Id generado dentro del controller
                 _controller.CrearAhorro(
-                    id: 0, // Este valor se ignora, ya que GenerarId lo genera en el controller
+                    id: 0,
                     nombreAhorro: nombreAhorro,
                     tipoAhorro: tipoAhorro,
-                    totalAhorro: monto,
+                    totalAhorro: 0, 
+                    montoObjetivo: monto, 
                     fechaInicio: fechaInicio,
                     fechaFinAhorro: fechaFinAhorro,
                     frecuencia: frecuencia,
                     ultimaFechaIngreso: fechaInicio
                 );
 
+
                 MessageBox.Show("Ahorro guardado correctamente.", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
 
-                // Abrir ventana Principal y cerrar actual
-                Principal principal = new Principal();
-                principal.Show();
+                Ahorro ahorro = new Ahorro();
+                ahorro.Show();
                 this.Close();
             }
             catch (Exception ex)
@@ -117,16 +116,13 @@ namespace gestorFinanzas.views
             }
 
 
-            Ahorro ahorroWindow = new Ahorro();
-            ahorroWindow.Show(); // Usa ShowDialog() si quieres que sea modal
 
-            ahorroWindow.Show();
+      
             this.Close();
         }
 
         private void txtMonto_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
         {
-            // Solo permite números
             Regex regex = new Regex("[^0-9]+");
             e.Handled = regex.IsMatch(e.Text);
         }

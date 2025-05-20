@@ -17,12 +17,11 @@
         </Grid.ColumnDefinitions>
 
         <!-- Menú lateral -->
-        <StackPanel x:Name="MenuPanel" Width="200" Background="White" Visibility="Visible">
+        <StackPanel x:Name="MenuPanel" Width="200" Background="White" Visibility="Collapsed">
             <Button Content="Ahorro" Margin="10" FontFamily="Segoe UI Black" Foreground="White" BorderBrush="#FF3B3A3A" Background="#FF3A3A3A" Click="BtnAhorro_Click"  />
-            <Button Content="Area Inversion" Margin="10" FontFamily="Segoe UI Black" Foreground="White" BorderBrush="#FF565656" Background="#FF464646" />
             <Button Content="Inversion" Margin="10" FontFamily="Segoe UI Black" Foreground="White" Background="#FF3A3A3A" Click="Button_Click_1" />
             <Button Content="TRM" Margin="10" FontFamily="Segoe UI Black" Foreground="White" Background="#FF484848" Click="Button_Click" />
-            <Button Content="Presupuesto" Margin="10" FontFamily="Segoe UI Black" Foreground="White" Background="#FF4E4E4E" />
+            <Button Content="Presupuesto" Margin="10" FontFamily="Segoe UI Black" Foreground="White" Background="#FF4E4E4E" Click="Button_Click_2" />
         </StackPanel>
 
         <!-- Botón hamburguesa -->

@@ -2,6 +2,7 @@
 using gestorFinanzas.Controllers;
 using gestorFinanzas.models;
 using gestorFinanzas.services;
+using gestorFinanzas.views;
 using LiveChartsCore;
 using LiveChartsCore.SkiaSharpView;
 using LiveChartsCore.SkiaSharpView.Painting;
@@ -297,6 +298,13 @@ namespace gestorFinanzas.Views
         {
             _timer?.Stop();
             base.OnClosed(e);
+        }
+
+        private void BtnVolver_Click(object sender, RoutedEventArgs e)
+        {
+            Principal principal = new Principal();
+            principal.Show();
+            this.Close();
         }
     }
 }
