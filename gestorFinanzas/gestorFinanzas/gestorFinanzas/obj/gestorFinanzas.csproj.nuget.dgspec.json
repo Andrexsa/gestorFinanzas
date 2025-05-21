@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\santy\\Source\\Repos\\gestorFinanzas\\gestorFinanzas\\gestorFinanzas\\gestorFinanzas\\gestorFinanzas.csproj": {}
+    "C:\\Users\\Lenovo_Sebas\\Documents\\Nueva carpeta (2)\\gestorFinanzas\\gestorFinanzas\\gestorFinanzas\\gestorFinanzas.csproj": {}
   },
   "projects": {
-    "C:\\Users\\santy\\Source\\Repos\\gestorFinanzas\\gestorFinanzas\\gestorFinanzas\\gestorFinanzas\\gestorFinanzas.csproj": {
+    "C:\\Users\\Lenovo_Sebas\\Documents\\Nueva carpeta (2)\\gestorFinanzas\\gestorFinanzas\\gestorFinanzas\\gestorFinanzas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\santy\\Source\\Repos\\gestorFinanzas\\gestorFinanzas\\gestorFinanzas\\gestorFinanzas\\gestorFinanzas.csproj",
+        "projectUniqueName": "C:\\Users\\Lenovo_Sebas\\Documents\\Nueva carpeta (2)\\gestorFinanzas\\gestorFinanzas\\gestorFinanzas\\gestorFinanzas.csproj",
         "projectName": "gestorFinanzas",
-        "projectPath": "C:\\Users\\santy\\Source\\Repos\\gestorFinanzas\\gestorFinanzas\\gestorFinanzas\\gestorFinanzas\\gestorFinanzas.csproj",
-        "packagesPath": "C:\\Users\\santy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\santy\\Source\\Repos\\gestorFinanzas\\gestorFinanzas\\gestorFinanzas\\gestorFinanzas\\obj\\",
+        "projectPath": "C:\\Users\\Lenovo_Sebas\\Documents\\Nueva carpeta (2)\\gestorFinanzas\\gestorFinanzas\\gestorFinanzas\\gestorFinanzas.csproj",
+        "packagesPath": "C:\\Users\\Lenovo_Sebas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Lenovo_Sebas\\Documents\\Nueva carpeta (2)\\gestorFinanzas\\gestorFinanzas\\gestorFinanzas\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\santy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lenovo_Sebas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Proyectos\\S23Sports\\Dev\\App\\4.S23SLocalNuGets": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0-windows7.0": {
@@ -86,6 +85,14 @@
             "SkiaSharp.Views.WPF": {
               "target": "Package",
               "version": "[2.88.6, )"
+            },
+            "itext7": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            },
+            "itext7.bouncy-castle-adapter": {
+              "target": "Package",
+              "version": "[9.2.0, )"
             }
           },
           "imports": [
@@ -107,7 +114,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

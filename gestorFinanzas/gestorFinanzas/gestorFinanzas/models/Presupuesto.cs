@@ -8,15 +8,17 @@ namespace gestorFinanzas.models
 {
     public class Presupuesto
     {
-        public decimal MontoIngresar { get; set; }
-        public string FechaIngresar { get; set; }
-        public bool PermitirGastoTotal { get; set; }
+        public int Id { get; set; }
+        public string NombreProducto { get; set; }
+        public decimal Precio { get; set; }
 
-        public Presupuesto(decimal montoIngresar, string fechaIngresar, bool permitirGastoTotal)
+        public Presupuesto() { }
+
+        public Presupuesto(int id, string nombreProducto, decimal precio)
         {
-            MontoIngresar = montoIngresar;
-            FechaIngresar = fechaIngresar;
-            PermitirGastoTotal = permitirGastoTotal;
+            Id = id;
+            NombreProducto = nombreProducto;
+            Precio = precio;
         }
     }
 }
