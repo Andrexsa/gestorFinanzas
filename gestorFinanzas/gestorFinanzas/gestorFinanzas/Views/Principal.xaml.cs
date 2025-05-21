@@ -73,9 +73,8 @@ namespace gestorFinanzas.views
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            Presupuesto presupuesto = new Presupuesto();
-            presupuesto.Show();
-            presupuesto.Show();
+            PresupuestoView presupuestoView = new PresupuestoView();
+            presupuestoView.Show();
             this.Close();
         }
     }
